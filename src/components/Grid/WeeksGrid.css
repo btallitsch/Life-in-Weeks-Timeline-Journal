@@ -1,0 +1,54 @@
+.weeks-grid-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.weeks-grid-scroll {
+  flex: 1;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.weeks-grid-inner {
+  display: inline-block;
+  min-width: 100%;
+}
+
+.grid-header-row {
+  display: grid;
+  grid-template-columns: 28px repeat(52, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.grid-col-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--text-3);
+  text-align: center;
+  line-height: 1.4;
+  height: 12px;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 28px repeat(52, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.grid-year-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--text-3);
+  text-align: right;
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1;
+  height: 100%;
+  min-width: 28px;
+}

@@ -1,0 +1,109 @@
+.week-cell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+  overflow: hidden;
+}
+
+.week-cell:hover {
+  transform: scale(1.6);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* States */
+.week-cell--future {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+}
+
+.week-cell--future:hover {
+  border-color: var(--border-bright);
+  background: var(--bg-3);
+}
+
+.week-cell--past {
+  background: var(--week-past);
+}
+
+.week-cell--past:hover {
+  background: var(--bg-4);
+}
+
+.week-cell--journaled {
+  background: var(--week-journaled);
+}
+
+.week-cell--journaled:hover {
+  background: #253d55;
+}
+
+.week-cell--milestone {
+  background: var(--week-milestone);
+}
+
+.week-cell--milestone:hover {
+  background: #4a2866;
+}
+
+.week-cell--planned {
+  background: var(--week-planned);
+}
+
+.week-cell--planned:hover {
+  background: #1e361e;
+}
+
+.week-cell--current {
+  background: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold-bright), 0 0 8px rgba(201,168,76,0.5);
+  animation: currentPulse 2s ease-in-out infinite;
+}
+
+.week-cell--current:hover {
+  transform: scale(1.8);
+  box-shadow: 0 0 0 2px var(--gold-bright), 0 0 16px rgba(201,168,76,0.6);
+}
+
+@keyframes currentPulse {
+  0%, 100% { box-shadow: 0 0 0 1px var(--gold-bright), 0 0 8px rgba(201,168,76,0.5); }
+  50% { box-shadow: 0 0 0 1px var(--gold-bright), 0 0 14px rgba(201,168,76,0.7); }
+}
+
+/* Dimmed (filtered out) */
+.week-cell--dimmed {
+  opacity: 0.15;
+}
+
+/* Inner indicators */
+.week-cell__mood {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+}
+
+.week-cell__tag-dot {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.week-cell__milestone-pip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+}

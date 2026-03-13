@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --bg-0: #080810;
+  --bg-1: #0e0e1a;
+  --bg-2: #13131f;
+  --bg-3: #1a1a2a;
+  --bg-4: #222236;
+  --border: #2a2a40;
+  --border-bright: #3a3a58;
+  --text-0: #f2eee6;
+  --text-1: #c8c4be;
+  --text-2: #8884a0;
+  --text-3: #55516a;
+  --gold: #c9a84c;
+  --gold-bright: #e8c068;
+  --gold-dim: #7a6530;
+  --week-empty: #13131f;
+  --week-past: #2a2840;
+  --week-journaled: #1e3348;
+  --week-milestone: #3a2050;
+  --week-current: #c9a84c;
+  --week-future: #0e0e1a;
+  --week-planned: #1a2a1a;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+  --shadow-gold: 0 0 12px rgba(201,168,76,0.35);
+  --transition: 150ms ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg-0); color: var(--text-0); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-1); }
+::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-bright); }
+::selection { background: var(--gold-dim); color: var(--text-0); }
+button { font-family: var(--font-mono); cursor: pointer; border: none; background: none; color: inherit; }
+input, textarea, select { font-family: var(--font-body); color: var(--text-0); background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius-sm); outline: none; }
+input:focus, textarea:focus, select:focus { border-color: var(--gold-dim); }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
